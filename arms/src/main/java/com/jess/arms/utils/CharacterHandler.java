@@ -114,6 +114,8 @@ public class CharacterHandler {
             }
         } catch (JSONException e) {
             message = json;
+        } catch (OutOfMemoryError error) {
+            message = "Output omitted because of Object size";
         }
         return message;
     }
